@@ -1,8 +1,8 @@
 FROM  maven:amazoncorretto AS builder
 
-WORKDIR /Maven
+WORKDIR /Maven_project
 
-COPY * .
+COPY Maven_project/* .
 
 RUN mvn install
 
