@@ -46,9 +46,7 @@ pipeline {
 
             steps {
 
-                sh """
-                docker build -t ${IMAGE_NAME}:latest .
-                """
+                sh 'docker build -t ${IMAGE_NAME}:latest .'
             }
         }
 
@@ -56,10 +54,8 @@ pipeline {
 
             steps {
 
-                sh """
-                docker stop ${CONTAINER_NAME} || true
-                docker rm ${CONTAINER_NAME} || true
-                """
+                sh 'docker stop ${CONTAINER_NAME} || true'
+                sh 'docker rm ${CONTAINER_NAME} || true'
             }
         }
 
@@ -67,12 +63,7 @@ pipeline {
 
             steps {
 
-                sh """
-                docker run -d \
-                --name ${CONTAINER_NAME} \
-                -p 8090:8080 \
-                ${IMAGE_NAME}:latest
-                """
+                sh 'docker run -d --name ${CONTAINER_NAME} -p 8090:8080 ${IMAGE_NAME}:latest'
             }
         }
 
