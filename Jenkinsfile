@@ -6,7 +6,7 @@ pipeline {
 
     environment {
 
-        TOMCAT_IP = '172.31.22.237'
+        TOMCAT_IP = '172.31.0.83'
         TOMCAT_PATH = '/var/lib/tomcat10/webapps/'
 
         IMAGE_NAME = 'maven-webapp'
