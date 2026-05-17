@@ -2,7 +2,7 @@ FROM amazoncorretto:21-alpine
 
 WORKDIR /Maven_project/
 
-COPY . .
+COPY * .
 
 RUN mvn install
 
