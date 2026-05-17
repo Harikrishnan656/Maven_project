@@ -1,6 +1,6 @@
-FROM  maven:amazoncorretto AS builder
+FROM maven:amazoncorretto AS builder
 
-WORKDIR /Maven_project
+WORKDIR ~/Maven_project
 
 COPY * .
 
