@@ -1,8 +1,8 @@
 FROM amazoncorretto:21-alpine
 
-WORKDIR ~/
+WORKDIR /Maven_project/
 
-COPY /Maven_project/* .
+COPY * .
 
 RUN mvn install
 
