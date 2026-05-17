@@ -2,7 +2,7 @@ FROM maven:3.9.9-amazoncorretto-21-alpine AS builder
 
 WORKDIR /Maven_project/
 
-COPY * .
+COPY . .
 
 RUN mvn clean package -DskipTests
 
