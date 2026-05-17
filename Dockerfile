@@ -4,7 +4,7 @@ WORKDIR /Maven_project/
 
 COPY * .
 
-RUN mvn install
+RUN mvn clean package -DskipTests
 
 FROM tomcat:9.0
 
