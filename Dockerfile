@@ -1,4 +1,4 @@
-FROM amazoncorretto:21-alpine
+FROM maven:3.9.9-amazoncorretto-21-alpine AS builder
 
 WORKDIR /Maven_project/
 
