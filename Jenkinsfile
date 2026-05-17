@@ -79,7 +79,7 @@ pipeline {
 
             steps {
 
-                sshagent(credentials: ['ubuntu']) {
+                sshagent(credentials: ['ansible']) {
 
                     sh """
                     scp -o StrictHostKeyChecking=no \
