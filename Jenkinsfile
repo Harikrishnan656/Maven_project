@@ -10,7 +10,7 @@ pipeline {
         TOMCAT_PATH = '/var/lib/tomcat10/webapps/'
 
         IMAGE_NAME = 'maven-webapp'
-        CONTAINER_NAME = 'maven-container'
+        CONTAINER_NAME = 'welcome-webapp'
     }
 
     stages {
