@@ -79,12 +79,12 @@ pipeline {
 
             steps {
 
-                sshagent(credentials: ['ansible']) {
+                sshagent(credentials: ['ubuntu']) {
 
                     sh """
                     scp -o StrictHostKeyChecking=no \
                     target/*.war \
-                    ansible@${TOMCAT_IP}:${TOMCAT_PATH}war.war
+                    ubuntu@${TOMCAT_IP}:${TOMCAT_PATH}war.war
                     """
                 }
             }
