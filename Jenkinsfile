@@ -75,16 +75,12 @@ pipeline {
             }
         }
 
-        stage('Deploy to Remote Tomcat') {
+        stage('Deploy Tomcat') {
 
             steps {
 
-                sshagent(credentials: ['ssh-key']) {
-
                     sh """
-                    scp -o StrictHostKeyChecking=no \
-                    target/*.war \
-                    ansible@${TOMCAT_IP}:${TOMCAT_PATH}war.war
+                    cp  target/*.war {TOMCAT_PATH}war.war
                     """
                 }
             }
