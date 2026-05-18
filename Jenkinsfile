@@ -79,7 +79,7 @@ pipeline {
 
             steps {
 
-                sshagent(credentials: ['ssn-key']) {
+                sshagent(credentials: ['ssh-key']) {
 
                     sh """
                     scp -o StrictHostKeyChecking=no \
