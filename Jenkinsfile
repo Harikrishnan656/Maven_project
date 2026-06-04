@@ -62,8 +62,8 @@ pipeline {
         stage('Run Docker Container') {
 
             steps {
-
-                sh 'docker run -d --name ${CONTAINER_NAME} -p 8090:8080 ${IMAGE_NAME}:latest'
+                sshagent(credentials: ['worker']) {
+                    sh 'scp /var/lib/jenkins/jobs/Maven-01/builds/**.war worker@172.31.0.71:/var/lib/tomcat10/webapp/*.war
             }
         }
 
